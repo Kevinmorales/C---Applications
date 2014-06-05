@@ -1,0 +1,113 @@
+
+#include <iostream>
+#include <iomanip>
+#include <cstdlib>
+#include <string>
+#include <fstream>
+
+
+using namespace std;
+
+struct Quarter
+    {
+           double q1;
+           double q2;
+           double q3;
+           double q4;
+    };//end of structure DivisionQ
+int main()
+{
+    int NumofD = 4; 
+  
+    double avg,
+           avg1,
+           avg2,
+           avg3,
+           avg4,
+           total1,
+           total2,
+           total3,
+           total4;
+             
+    Quarter   Div[NumofD];
+    
+        
+    for (int i=0; i < NumofD;i++)
+    {   
+             
+        cout<<"What are the  quarter sales figures for quarter for East Division\n"<<endl;
+        cin>>Div[i].q1;
+        while (Div[i].q1 < 0)
+        {
+              cout<<"You entered a invalid number. Try again\n";
+              cin>>Div[i].q1;
+              
+        } 
+                     
+        cout<<"What are the  quarter sales figure for quarter for West Division\n"<<endl;
+        cin>>Div[i].q2;
+        while (Div[i].q2 < 0)
+        {
+              cout<<"You entered a invalid number. Try again\n";
+              cin>>Div[i].q1;
+        }      
+        
+        
+        cout<<"What are the quarter sales figures for quarter for North Division\n"<<endl;
+        cin>>Div[i].q3;
+        while (Div[i].q3 < 0)
+        {
+              cout<<"You entered a invalid number. Try again\n";
+              cin>>Div[i].q3;
+        } 
+        
+        cout<<"What are the quarter sales figures for quater for South Division\n"<<endl;
+        cin>>Div[i].q4;
+        while (Div[i].q4 < 0)
+        {
+              cout<<"You entered a invalid number. Try again\n";
+              cin>>Div[i].q4;
+              
+        } 
+        
+        
+        
+        
+        
+    }
+       
+   //display outcomes 
+    
+   for (int i=0; i < 1;i++)
+   { 
+   //calculations
+       total1 = Div[0].q1 + Div[1].q1 + Div[2].q1 + Div[3].q1;
+       total2 =  Div[0].q2 + Div[1].q2 + Div[2].q2 + Div[3].q2;
+       total3 = Div[0].q3 + Div[1].q3 + Div[2].q3 + Div[3].q3;
+       total4 = Div[0].q4 + Div[1].q4 + Div[2].q4 +Div[3].q4;
+       
+       avg1 = total1/4;
+       avg2 = total2/4;
+       avg3 = total3/4;
+       avg4 = total4/4;
+       avg = (total1 + total2 + total3 + total4)/16;
+   //display        
+   cout<<"The total for East is "<<total1<<" and the avg sales amount is "<<avg1<<"."<<endl;
+   cout<<"The total for West is "<<total2<<" and the avg sales amount is "<<avg2<<"."<<endl;
+   cout<<"The total for North is "<<total3<<" and the avg sales amount is "<<avg3<<"."<<endl;
+   cout<<"The total South is "<<total4<<" and the avg sales amount is "<<avg4<<"."<<endl;
+   cout<<"The Average Quarterly Sales amount across ALL FOUR DIVISIONS is "<<avg<<"."<<endl;
+   
+   ofstream myfile;
+   myfile.open ("Assignment 5(page 645) Corporate.txt"); //to send to an OUTFILE
+   myfile<<"The total for East is "<<total1<<" and the avg sales amount is "<<avg1<<"."<<endl;
+   myfile<<"The total for West is "<<total2<<" and the avg sales amount is "<<avg2<<"."<<endl;
+   myfile<<"The total for North is "<<total3<<" and the avg sales amount is "<<avg3<<"."<<endl;
+   myfile<<"The total South is "<<total4<<" and the avg sales amount is "<<avg4<<"."<<endl;
+   myfile<<"The Average Quarterly Sales amount across ALL FOUR DIVISIONS is "<<avg<<"."<<endl;
+   }
+   
+
+system ("pause");
+return 0;     
+}//end of main
