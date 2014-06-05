@@ -1,0 +1,70 @@
+//Kevin Morales
+
+#include <iostream.h>
+
+/*******************************************
+This lab about constructing structures 
+*******************************************/
+
+struct Corporate_Sales 
+{
+	float quarter1[first_sales];
+	float quarter2[second_sales];
+	float quarter3[third_sales];
+	float quarter4[fourth_sales];
+} North,South,West,East;
+
+int main()
+{
+cout << "What is the sales for North in Quarter 1"
+cin >> North.quarter1
+
+cout << "What is the sales for North in Quarter 2"
+cin >> North.quarter2
+
+cout << "What is the sales for North in Quarter 3"
+cin >> North.quarter3
+	
+cout << "What is the sales for North in Quarter 4"
+cin >> North.quarter4
+
+
+cout << "What is the sales for the South in Quarter 1"
+cin >> South.quarter1
+
+cout << "What is the sales for the South in Quarter 2"
+cin >> South.quarter2
+	
+cout << "What is the sales for the South in Quarter 3"
+cin >> South.quarter3	
+
+cout << "What is the sales for the South in Quarter 4"
+cin >> South.quarter4
+    
+    
+cout << "What is the sales for the West in Quarter 1"
+cin >> West.quarter1
+
+cout << "What is the sales for the West in Quarter 2"
+cin >> West.quarter2
+	
+cout << "What is the sales for the West in Quarter 3"
+cin >> West.quarter3	
+
+cout << "What is the sales for the West in Quarter 4"
+cin >> West.quarter4
+        
+        
+cout << "What is the sales for the East in Quarter 1"
+cin >> East.quarter1
+cout << "What is the sales for the East in Quarter 2"
+cin >> East.quarter2
+cout << "What is the sales for the East in Quarter 3"
+cin >> East.quarter3
+cout << "What is the sales for the East in Quarter 4"
+cin >> East.quarter4
+}
+
+
+    // need to do the calculation for each division and that is it. 
+    
