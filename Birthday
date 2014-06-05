@@ -1,0 +1,47 @@
+// ==========  structures and function ======
+// this program enables the user to Access the  structure from a function and returns
+// the values to main.
+#include <iostream.h>
+#include<iomanip.h>
+using namespace std;
+struct date{
+				int Month;
+				int day;
+				int year;
+				};
+
+
+date DateFunction();// prototype
+
+int main()
+{
+ date BirthDay;
+
+ BirthDay = DateFunction();
+
+ cout << "\n are you sure that this is your birth day "
+      << BirthDay.Month<<"/"<<BirthDay.day<<"/"
+      <<BirthDay.year; 
+   
+      system("pause"); 
+
+ return 0;
+ }
+
+ date DateFunction()
+ {
+  date Myday;    
+  cout<<"\n what month were you born in? ";
+  cin >>Myday.Month;
+
+  cout<<"\n what day were you born in? ";
+  cin >>Myday.day;
+
+  cout<<"\n what year were you born in? ";
+  cin >>Myday.year;
+
+  cout << "\n hmmmmm So your Birth Day is " <<Myday.Month<<"/"<<Myday.day<<"/"
+		<<Myday.year;
+	// in this case no need to return any thing
+	return Myday;
+  }
