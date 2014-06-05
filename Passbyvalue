@@ -1,0 +1,63 @@
+//Kevin Morales 
+//Professor Aljamal
+//CIS - Assignment Two
+
+//*******************************************
+//This program will help the user calculate * 
+//the area of a circle, square and rectangle* 
+//*******************************************
+
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+//********************
+//Prototype 		 *
+//********************
+double getRadius();
+double square(double);
+
+//****************************
+//Main Function 			 *
+//****************************
+
+int main ()
+{
+	double radius, result;
+	const double PI = 3.14159;
+
+	cout << fixed << showpoint << setprecision(2);
+	cout << "This program calculates the area of a circle. \n";
+	//cin >> radius;
+	radius = getRadius();
+	result = square(radius);
+	cout << "The area is " << PI * square(radius) << endl; 
+	return 0;
+	//add switch statement 
+}
+//**********************************************
+// Define the getRadius 					   *
+// Allows user to enter number of the Radius   *
+// *********************************************
+
+double getRadius()
+{
+	double radius;
+
+	cout << "Enter the radius of the circle: \n";
+	cin >> radius;
+	return radius;
+}
+
+//**********************************************
+//Define squared radius 					   *
+//This function accepts a double argument and  *
+//returns one argument						   *
+//**********************************************
+
+double square(double radius)
+{
+	return radius * radius;
+}
+
